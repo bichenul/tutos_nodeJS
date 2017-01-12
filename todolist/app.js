@@ -45,7 +45,7 @@ on en crée une vide sous forme d'array avant la suite */
 /* modifier un élément */
 .get('/todo/modifier/:id',function(req, res){
 	if (req.params.id != '') {
-        req.session.todolist.splice(req.params.id, 1);
+        req.session.todolist.push(req.body.newtodo);
     }
     res.redirect('/todo');
 	
